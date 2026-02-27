@@ -37,7 +37,7 @@ const weddingData: Record<string, WeddingData> = {
   bride: {
     side: 'bride',
     eventName: 'Wedding Ceremony',
-    time: '11:00 AM - 11:30 AM',
+    time: '11:30 AM - 12:00 PM',
     venue: 'Karuvannur,Perambra',
     address: 'Kozhikode',
     note: 'Traditional ceremony followed by lunch',

@@ -2,7 +2,7 @@
   "name": "my-app",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://ansabntd.github.io/wedding-invitation",
+  "homepage": "https://vamikavivek.github.io/wedding-card",
   "type": "module",
   "scripts": {
     "dev": "vite",
