@@ -163,7 +163,7 @@ function LandingSelector({ onSelect }: { onSelect: (side: 'groom' | 'bride') => 
       {/* Content */}
       <div className="relative z-10 text-center px-6 py-8 max-w-md w-full">
         <p className="text-[10px] uppercase tracking-[0.3em] text-white/70 mb-3">
-          After 6 beautiful years
+          After 7 beautiful years
         </p>
         
         <h1 className="font-serif text-4xl text-white mb-1">
@@ -341,7 +341,7 @@ function LetterSection() {
         
         <div className="space-y-4 text-[#7A6B5A] text-base leading-relaxed text-left md:text-center">
           <p>
-            You have been there through every bit of our story—from the college halls in 2019 to this dream moment in 2026. For the last 6 years, you have seen us grow, laughed with us through the highs, and held us up through the lows.
+            You have been there through every bit of our story—from the college halls in 2019 to this dream moment in 2026. For the last 7 years, you have seen us grow, laughed with us through the highs, and held us up through the lows.
           </p>
           <p>
             Our journey would not be the same without your love and constant presence. As we take the biggest step of our lives and choose &apos;forever&apos;, we want the ones who have been part of our &apos;every day&apos; to be part of our &apos;always.&apos;
