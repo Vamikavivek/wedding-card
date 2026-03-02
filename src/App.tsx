@@ -7,6 +7,7 @@ import { QRCodeCanvas } from "qrcode.react";
 interface WeddingData {
   side: 'groom' | 'bride';
   eventName: string;
+  subdetails: string;
   time: string;
   venue: string;
   address: string;
@@ -21,6 +22,7 @@ const weddingData: Record<string, WeddingData> = {
   groom: {
     side: 'groom',
     eventName: 'Reception Celebration',
+    subdetails:'',
     time: '4:00 PM - 11:00 PM',
     venue: 'Poonoor',
     address: 'Kozhikode',
@@ -37,6 +39,7 @@ const weddingData: Record<string, WeddingData> = {
   bride: {
     side: 'bride',
     eventName: 'Wedding Ceremony',
+    subdetails:'You are cordially invited to the Pre-Wedding Celebration on the Eve of the Wedding 25 April, from 4:00 PM to 11:00 PM',
     time: '11:30 AM - 12:00 PM',
     venue: 'Karuvannur,Perambra',
     address: 'Kozhikode',
@@ -70,14 +73,20 @@ function AudioPlayer() {
   }, []);
 
   const togglePlay = () => {
-    if (audioRef.current) {
-      if (isPlaying) {
-        audioRef.current.pause();
-      } else {
-        audioRef.current.play().catch(() => {});
-      }
-      setIsPlaying(!isPlaying);
+
+    // Create audio only when user interacts (important for iOS)
+    if (!audioRef.current) {
+      audioRef.current = new Audio('/audio/pidayunnerente.mpeg');
+      audioRef.current.loop = true;
     }
+
+    if (isPlaying) {
+      audioRef.current.pause();
+    } else {
+      audioRef.current.play().catch(() => {});
+    }
+
+    setIsPlaying(!isPlaying);
   };
 
   return (
@@ -421,6 +430,9 @@ function DetailsSection({ side }: { side: 'groom' | 'bride' }) {
         <div className="text-center mb-10">
           <p className="text-[10px] uppercase tracking-[0.25em] text-[#C9A87C] mb-2">Save the Date</p>
           <h2 className="font-serif text-4xl md:text-5xl text-[#3A2E22]">Wedding Details</h2>
+          <p className="text-xs text-[#9B8E7E] mt-3 leading-relaxed max-w-md mx-auto">
+    {data.subdetails}
+  </p>
         </div>
         
         <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
