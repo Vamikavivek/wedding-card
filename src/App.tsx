@@ -61,7 +61,7 @@ function AudioPlayer() {
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
   useEffect(() => {
-    audioRef.current = new Audio('audio/pidayunnerente.mpeg');
+    audioRef.current = new Audio('audio/pidayunnerente.mp3');
     audioRef.current.loop = true;
     
     return () => {
@@ -76,7 +76,7 @@ function AudioPlayer() {
 
     // Create audio only when user interacts (important for iOS)
     if (!audioRef.current) {
-      audioRef.current = new Audio('/audio/pidayunnerente.mpeg');
+      audioRef.current = new Audio('/audio/pidayunnerente.mp3');
       audioRef.current.loop = true;
     }
 
@@ -552,9 +552,12 @@ function Footer() {
     <footer className="relative w-full py-12 bg-[#3A2E22]">
       <div className="max-w-md mx-auto px-6 text-center">
         <Heart className="w-6 h-6 text-[#C9A87C] mx-auto mb-4" fill="#C9A87C" />
-        <p className="font-serif text-xl text-[#F6F2EA] mb-1">Vamika & Vivek</p>
+        <p className="font-serif text-xl text-[#F6F2EA] mb-1">Vivek & Vamika</p>
         <p className="text-[#C9A87C] text-sm mb-4">April 26, 2026</p>
         <p className="text-[#F6F2EA]/50 text-xs">Made with love for our closest friends</p>
+        <p className="text-xs text-[#9B8E7E] text-center mt-6">
+   © Bizadepts
+</p>
       </div>
     </footer>
   );
